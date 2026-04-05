@@ -1,0 +1,50 @@
+{
+  "name": "opensrc",
+  "version": "0.6.0",
+  "description": "Fetch source code for npm packages to give coding agents deeper context",
+  "type": "module",
+  "bin": {
+    "opensrc": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vercel-labs/opensrc"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx}\"",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "cli",
+    "source-code",
+    "npm",
+    "packages",
+    "ai",
+    "coding-agents"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.16"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
